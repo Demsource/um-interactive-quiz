@@ -1,0 +1,97 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 10px;
+  align-self: center;
+}
+
+/* Styling question */
+main h3 {
+  margin-top: 10px;
+  text-align: justify;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+/* End of Styling question */
+
+/* Styling answer buttons */
+main .answer-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+main .answer-btns button {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c5dbd4;
+  border-radius: 8px;
+  border: 1px solid;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 500ms;
+  user-select: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+main .answer-btns button:hover {
+  background-color: #98d2c0;
+}
+main .answer-btns button.user-answer {
+  background-color: #4f959d;
+  border-style: none;
+  color: white;
+}
+main .answer-btns button.correct {
+  background-color: green;
+  color: white;
+}
+main .answer-btns button.incorrect {
+  background-color: red;
+  color: white;
+}
+
+main .answer-btns button svg {
+  font-size: large;
+  margin-left: 20px;
+}
+/* End of tyling answer buttons */
+
+main .explanation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+/* Styling explanation */
+main .explanation-wrapper .explanation-btn {
+  background-color: #98d2c0;
+  border-radius: 5px;
+  color: #205781;
+  cursor: pointer;
+  font-size: small;
+  font-weight: bold;
+  align-self: flex-end;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+main .explanation-wrapper .explanation {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: justify;
+}
+/* End of Styling explanation */
+
+/* Styling unanswered note */
+main .unanswered-note {
+  color: orange;
+  font-weight: bold;
+  margin-top: 10px;
+}
+/* End of Styling unanswered note */

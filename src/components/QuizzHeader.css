@@ -1,0 +1,35 @@
+/* Styling header */
+header {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+header h2 {
+  color: #205781;
+  margin-bottom: 20px;
+}
+
+header .time-left {
+  background-color: #98d2c0;
+  border-radius: 5px;
+  display: flex;
+  width: 70px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+header .time-left svg {
+  color: #205781;
+}
+
+header .time-left .time {
+  background-color: #205781;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+}
+/* End of Styling header */

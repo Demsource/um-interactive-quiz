@@ -1,0 +1,25 @@
+/* Styling footer */
+footer.quizz-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+footer.quizz-footer button.next-and-submit {
+  background-color: #176ddd;
+  border-radius: 8px;
+  border: 1px solid;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+  transition: background-color 500ms;
+}
+footer.quizz-footer button.next-and-submit:hover,
+footer.quizz-footer button.next-and-submit:focus {
+  background-color: #46a8f5;
+}
+/* End of Styling footer */

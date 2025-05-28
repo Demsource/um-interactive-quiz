@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What happens when you call setState in a React component?",
+    "correct_answer": "The state is updated asynchronously, and the component re- renders",
+    "incorrect_answers": [
+      "The state is updated immediately",
+      "The state is updated only if a callback is provided",
+      "The state update triggers an error if the component is functional"
+    ],
+    "explanation": "When you call setState in a React component, the state is not updated immediately. Instead, React schedules an update to the component’s state, which happens asynchronously. After the state is updated, React re-renders the component to reflect the changes in the UI. This asynchronous behavior allows React to optimize performance by batching multiple state updates together."
+  },
+  {
+    "question": "Which of the following lifecycle methods is NOT available in functional components?",
+    "correct_answer": "Functional components don't have lifecycle methods; they use hooks instead",
+    "incorrect_answers": [
+      "componentDidMount",
+      "componentDidUpdate",
+      "componentWillUnmount"
+    ],
+    "explanation": "Functional components in React do not have traditional class-based lifecycle methods such as componentDidMount, componentDidUpdate, or componentWillUnmount. Instead, functional components utilize hooks such as useEffect to handle lifecycle events. The useEffect hook can be configured to mimic the behaviors of these lifecycle methods, allowing functional components to perform side effects and manage lifecycle events without explicitly defining lifecycle methods."
+  },
+  {
+    "question": "What is the primary purpose of useEffect in React?",
+    "correct_answer": "To fetch data and perform side effects",
+    "incorrect_answers": [
+      "To handle events in a component",
+      "To manage component lifecycle methods",
+      "To create state variables in a component"
+    ],
+    "explanation": "The primary purpose of the useEffect hook in React is to manage side effects in functional components. Side effects can include data fetching, subscriptions, manually changing the DOM, or any operations that interact with external systems (like APIs). The useEffect hook allows you to perform these operations while keeping the component's rendering logic separate."
+  },
+  {
+    "question": "What is the purpose of the Symbol data type?",
+    "correct_answer": "To ensure object property keys are unique",
+    "incorrect_answers": [
+      "To create private object properties",
+      "To replace string literals in objects",
+      "To simplify object destructuring"
+    ],
+    "explanation": "The Symbol data type in JavaScript is used primarily to create unique identifiers for object properties. Each time you create a new symbol, it is guaranteed to be unique, even if multiple symbols have the same description. This uniqueness is particularly useful for creating object properties that won't collide with properties that may exist on an object or its prototype chain."
+  },
+  {
+    "question": "What is the default behavior of React's useEffect hook?",
+    "correct_answer": "Runs after every render",
+    "incorrect_answers": [
+      "Runs only on the first render",
+      "Runs before the component renders",
+      "Runs only when the state changes"
+    ],
+    "explanation": "The default behavior of React's useEffect hook is that it runs after every render of the component in which it is defined. This means that every time the component updates (due to a change in state or props), the code inside useEffect will be executed after the DOM has been updated."
+  }
+]
