@@ -80,6 +80,18 @@ main .explanation-wrapper .explanation-btn {
   padding: 10px;
   margin-top: 10px;
 }
+main .explanation-wrapper .explanation-btn:hover {
+  background-color: #4f959d;
+  color: white;
+}
+main .explanation-wrapper .explanation-btn.explanation-open-btn {
+  background-color: #205781;
+  color: white;
+}
+main .explanation-wrapper .explanation-btn.explanation-open-btn:hover {
+  background-color: #4f959d;
+  color: white;
+}
 
 main .explanation-wrapper .explanation {
   font-weight: bold;

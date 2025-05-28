@@ -74,7 +74,9 @@ const QuestionWithAnswers = ({
         (quizz.selectedIdx === 0 || quizz.selectedIdx > 0 ? (
           <div className="explanation-wrapper">
             <div
-              className="explanation-btn"
+              className={`explanation-btn ${
+                openExplanation ? "explanation-open-btn" : ""
+              }`}
               onClick={handleShowHideExplanation}
             >
               Why is it correct?
