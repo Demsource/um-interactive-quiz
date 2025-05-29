@@ -83,7 +83,6 @@ function App() {
         quizzes?.length && (
           <OneByOneQuizzes
             seconds={seconds}
-            setSeconds={setSeconds}
             quiz={quizzes[currentQuizzIndex]}
             currentQuizNumber={currentQuizzIndex + 1}
             totalQuizzes={quizzes.length}

@@ -6,7 +6,6 @@ import QuizzFooter from "./QuizzFooter";
 
 const OneByOneQuizzes = ({
   seconds,
-  setSeconds,
   quiz,
   currentQuizNumber,
   totalQuizzes,
@@ -19,7 +18,6 @@ const OneByOneQuizzes = ({
     if (seconds === 0) {
       if (currentQuizNumber !== totalQuizzes) {
         nextQuestion();
-        setSeconds(30);
       } else {
         submitAnswersHandler();
       }
@@ -31,6 +29,7 @@ const OneByOneQuizzes = ({
     nextQuestion,
     submitAnswersHandler,
   ]);
+
   const progressBarStyle = useMemo(() => {
     return {
       width: `calc((100% / ${totalQuizzes} * ${currentQuizNumber}) + 20px)`,
