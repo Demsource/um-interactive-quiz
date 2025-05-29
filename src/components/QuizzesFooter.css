@@ -11,7 +11,7 @@ footer.quizzes-footer h3 {
   margin-top: 20px;
 }
 
-footer.quizzes-footer button.restart-quizz {
+footer.quizzes-footer button.restart-quiz {
   background-color: #176ddd;
   border-radius: 8px;
   border: 1px solid;
@@ -24,8 +24,8 @@ footer.quizzes-footer button.restart-quizz {
   text-align: center;
   transition: background-color 500ms;
 }
-footer.quizzes-footer button.restart-quizz:hover,
-footer.quizzes-footer button.restart-quizz:focus {
+footer.quizzes-footer button.restart-quiz:hover,
+footer.quizzes-footer button.restart-quiz:focus {
   background-color: #46a8f5;
 }
 /* End of Styling footer */

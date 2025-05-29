@@ -4,7 +4,7 @@ import QuestionWithAnswers from "./QuestionWithAnswers";
 import QuizzesFooter from "./QuizzesFooter";
 import QuizzHeader from "./QuizzHeader";
 
-const BulkQuizzes = ({ quizzes, handleRestartQuizz }) => {
+const BulkQuizzes = ({ quizzes, handleRestartQuiz }) => {
   return (
     <section className="bulk-quizzes">
       <QuizzHeader />
@@ -21,7 +21,7 @@ const BulkQuizzes = ({ quizzes, handleRestartQuizz }) => {
       <div className="divider"></div>
       <QuizzesFooter
         quizzes={quizzes}
-        handleRestartQuizz={handleRestartQuizz}
+        handleRestartQuiz={handleRestartQuiz}
       />
     </section>
   );

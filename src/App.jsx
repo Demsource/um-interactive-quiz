@@ -67,7 +67,7 @@ function App() {
     setSeconds(0);
   }, []);
 
-  const handleRestartQuizz = useCallback(() => {
+  const handleRestartQuiz = useCallback(() => {
     // Restart and reset quizz app
     setShowQuizzesResults(false);
     setSeconds(30);
@@ -94,7 +94,7 @@ function App() {
       ) : (
         <BulkQuizzes
           quizzes={quizzes}
-          handleRestartQuizz={handleRestartQuizz}
+          handleRestartQuiz={handleRestartQuiz}
         />
       )}
     </div>

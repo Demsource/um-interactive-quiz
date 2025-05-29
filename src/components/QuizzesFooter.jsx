@@ -1,12 +1,12 @@
 import React from "react";
 import "./QuizzesFooter.css";
 
-const QuizzesFooter = ({ quizzes, handleRestartQuizz }) => {
+const QuizzesFooter = ({ quizzes, handleRestartQuiz }) => {
   // Find correct answers count from user's selected answers
-  const correctAnswersCount = quizzes.reduce((accumulator, quizz) => {
+  const correctAnswersCount = quizzes.reduce((accumulator, quiz) => {
     if (
-      (quizz.selectedIdx === 0 || quizz.selectedIdx > 0) &&
-      quizz.shuffledAllAnswers[quizz.selectedIdx] === quizz.correct_answer
+      (quiz.selectedIdx === 0 || quiz.selectedIdx > 0) &&
+      quiz.shuffledAllAnswers[quiz.selectedIdx] === quiz.correct_answer
     ) {
       return (accumulator += 1);
     } else {
@@ -23,7 +23,7 @@ const QuizzesFooter = ({ quizzes, handleRestartQuizz }) => {
         You scored {correctAnswersCount} out of {quizzes.length} questions
         correctly and earned {earnedPoints} points
       </h3>
-      <button className="restart-quizz" onClick={handleRestartQuizz}>
+      <button className="restart-quiz" onClick={handleRestartQuiz}>
         Restart Quiz
       </button>
     </footer>
