@@ -12,7 +12,7 @@ const BulkQuizzes = ({ quizzes, handleRestartQuizz }) => {
         {quizzes.map((quiz, i) => (
           <QuestionWithAnswers
             key={quiz.id}
-            currentQuizzNumber={i + 1}
+            currentQuizNumber={i + 1}
             quiz={quiz}
             BulkQuizzes
           />

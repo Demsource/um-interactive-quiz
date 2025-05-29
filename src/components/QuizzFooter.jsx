@@ -2,7 +2,7 @@ import React from "react";
 import "./QuizzFooter.css";
 
 const QuizzFooter = ({
-  currentQuizzNumber,
+  currentQuizNumber,
   totalQuizzes,
   nextQuestion,
   submitAnswersHandler,
@@ -10,9 +10,9 @@ const QuizzFooter = ({
   return (
     <footer className="quizz-footer">
       <p>
-        {currentQuizzNumber} of {totalQuizzes} Questions
+        {currentQuizNumber} of {totalQuizzes} Questions
       </p>
-      {currentQuizzNumber !== totalQuizzes ? (
+      {currentQuizNumber !== totalQuizzes ? (
         <button className="next-and-submit" onClick={nextQuestion}>
           Next
         </button>

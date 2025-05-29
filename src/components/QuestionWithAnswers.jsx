@@ -7,7 +7,7 @@ import {
 import React, { useState } from "react";
 
 const QuestionWithAnswers = ({
-  currentQuizzNumber,
+  currentQuizNumber,
   quiz,
   handleAnswerSelect,
   BulkQuizzes,
@@ -21,7 +21,7 @@ const QuestionWithAnswers = ({
   return (
     <main>
       <h3>
-        {currentQuizzNumber}. {quiz.question}
+        {currentQuizNumber}. {quiz.question}
       </h3>
       <div className="answer-btns">
         {quiz.shuffledAllAnswers.map((answer, i) => {
