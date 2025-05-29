@@ -1,6 +1,7 @@
 import "./QuizzHeader.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 const QuizzHeader = ({ seconds, hasTimer }) => {
   return (
@@ -16,4 +17,4 @@ const QuizzHeader = ({ seconds, hasTimer }) => {
   );
 };
 
-export default QuizzHeader;
+export default React.memo(QuizzHeader);

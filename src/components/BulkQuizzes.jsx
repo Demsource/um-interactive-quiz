@@ -1,3 +1,4 @@
+import React from "react";
 import "./BulkQuizzes.css";
 import QuestionWithAnswers from "./QuestionWithAnswers";
 import QuizzesFooter from "./QuizzesFooter";
@@ -8,11 +9,11 @@ const BulkQuizzes = ({ quizzes, handleRestartQuizz }) => {
     <section className="bulk-quizzes">
       <QuizzHeader />
       <div className="question-with-answers">
-        {quizzes.map((quizz, i) => (
+        {quizzes.map((quiz, i) => (
           <QuestionWithAnswers
-            key={i}
+            key={quiz.id}
             currentQuizzNumber={i + 1}
-            quizz={quizz}
+            quiz={quiz}
             BulkQuizzes
           />
         ))}
@@ -26,4 +27,4 @@ const BulkQuizzes = ({ quizzes, handleRestartQuizz }) => {
   );
 };
 
-export default BulkQuizzes;
+export default React.memo(BulkQuizzes);

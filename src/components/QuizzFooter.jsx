@@ -1,3 +1,4 @@
+import React from "react";
 import "./QuizzFooter.css";
 
 const QuizzFooter = ({
@@ -28,4 +29,4 @@ const QuizzFooter = ({
   );
 };
 
-export default QuizzFooter;
+export default React.memo(QuizzFooter);

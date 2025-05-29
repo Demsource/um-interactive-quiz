@@ -1,3 +1,4 @@
+import React from "react";
 import "./QuizzesFooter.css";
 
 const QuizzesFooter = ({ quizzes, handleRestartQuizz }) => {
@@ -23,10 +24,10 @@ const QuizzesFooter = ({ quizzes, handleRestartQuizz }) => {
         correctly and earned {earnedPoints} points
       </h3>
       <button className="restart-quizz" onClick={handleRestartQuizz}>
-        Restart Quizz
+        Restart Quiz
       </button>
     </footer>
   );
 };
 
-export default QuizzesFooter;
+export default React.memo(QuizzesFooter);

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import data from "./data.json";
 import shuffle from "./utils/shuffle";
@@ -43,7 +43,7 @@ function App() {
     setQuizzes(shuffledQuizzesWithSelectionAndId);
   }, []);
 
-  const handleAnswerSelect = (quizzId, answerIdx) => {
+  const handleAnswerSelect = useCallback((quizzId, answerIdx) => {
     // Update quizzes state when the user selects an answer
     setQuizzes((prevQuizzes) =>
       prevQuizzes.map((prevQuizz) =>
@@ -52,30 +52,30 @@ function App() {
           : prevQuizz
       )
     );
-  };
+  }, []);
 
-  const nextQuestion = () => {
+  const nextQuestion = useCallback(() => {
     // Move on to the next question until it's a last one and reset the timer
     currentQuizzIndex !== quizzes.length - 1 &&
       setCurrentQuizzIndex((prevIdx) => prevIdx + 1);
     setSeconds(30);
-  };
+  }, [currentQuizzIndex, quizzes.length]);
 
-  const submitAnswersHandler = () => {
+  const submitAnswersHandler = useCallback(() => {
     // Show quizzes results and stop the timer after submitting the answers
     setShowQuizzesResults(true);
     setSeconds(0);
-  };
+  }, []);
 
-  const handleRestartQuizz = () => {
+  const handleRestartQuizz = useCallback(() => {
     // Restart and reset quizz app
     setShowQuizzesResults(false);
     setSeconds(30);
     setQuizzes((prevQuizzes) =>
-      prevQuizzes.map((prevQuizz) => ({ ...prevQuizz, selectedIdx: "" }))
+      prevQuizzes.map((prevQuizz) => ({ ...prevQuizz, selectedIdx: null }))
     );
     setCurrentQuizzIndex(0);
-  };
+  }, []);
 
   return (
     <div className="interactive-quiz">
@@ -84,8 +84,8 @@ function App() {
           <OneByOneQuizzes
             seconds={seconds}
             setSeconds={setSeconds}
-            quizz={quizzes[currentQuizzIndex]}
-            currentQuizzNumber={currentQuizzIndex + 1}
+            quiz={quizzes[currentQuizzIndex]}
+            currentQuizNumber={currentQuizzIndex + 1}
             totalQuizzes={quizzes.length}
             handleAnswerSelect={handleAnswerSelect}
             nextQuestion={nextQuestion}
@@ -95,7 +95,6 @@ function App() {
       ) : (
         <BulkQuizzes
           quizzes={quizzes}
-          setSeconds={setSeconds}
           handleRestartQuizz={handleRestartQuizz}
         />
       )}
