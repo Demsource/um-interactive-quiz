@@ -31,7 +31,6 @@ main .answer-btns {
 }
 
 main .answer-btns button {
-  color: black;
   justify-content: space-between;
   align-items: center;
   background-color: #c5dbd4;

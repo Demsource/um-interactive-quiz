@@ -59,7 +59,11 @@ const QuestionWithAnswers = ({
             <button
               key={i}
               className={answerButtonClass}
-              style={BulkQuizzes ? { display: "flex" } : { display: "block" }}
+              style={
+                BulkQuizzes
+                  ? { display: "flex" }
+                  : { display: "block", color: "black" }
+              }
               onClick={() =>
                 handleAnswerSelect && handleAnswerSelect(quiz.id, i)
               }
