@@ -6,4 +6,17 @@
   height: 100%;
 }
 
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  .interactive-quiz * {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  /* Styles for mobiles */
+  .interactive-quiz * {
+    font-size: xx-small;
+  }
+}
 /* coolors: 205781 */
