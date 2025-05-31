@@ -5,10 +5,18 @@ footer.quizzes-footer {
   align-items: center;
 }
 
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  footer.quizzes-footer {
+    width: 300px;
+  }
+}
+
 footer.quizzes-footer h3 {
   color: #205781;
   font-weight: bold;
   margin-top: 20px;
+  text-align: center;
 }
 
 footer.quizzes-footer button.restart-quiz {
@@ -28,4 +36,12 @@ footer.quizzes-footer button.restart-quiz:hover,
 footer.quizzes-footer button.restart-quiz:focus {
   background-color: #46a8f5;
 }
+
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  footer.quizzes-footer button.restart-quiz {
+    width: 100%;
+  }
+}
+
 /* End of Styling footer */

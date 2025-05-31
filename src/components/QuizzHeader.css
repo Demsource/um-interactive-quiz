@@ -2,7 +2,17 @@
 header {
   display: flex;
   justify-content: space-between;
-  min-width: 300px;
+}
+
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  header {
+    justify-self: center;
+    width: 300px;
+  }
+  header h2 {
+    text-align: center;
+  }
 }
 
 header h2 {

@@ -6,6 +6,13 @@ main {
   align-self: center;
 }
 
+@media screen and (max-width: 810px) {
+  /* Styles for tablets */
+  main {
+    width: 300px;
+  }
+}
+
 /* Styling question */
 main h3 {
   margin-top: 10px;
@@ -24,6 +31,7 @@ main .answer-btns {
 }
 
 main .answer-btns button {
+  color: black;
   justify-content: space-between;
   align-items: center;
   background-color: #c5dbd4;
