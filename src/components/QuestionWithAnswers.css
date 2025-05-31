@@ -52,7 +52,7 @@ main .answer-btns button:hover {
 main .answer-btns button.user-answer {
   background-color: #4f959d;
   border-style: none;
-  color: white;
+  color: white !important;
 }
 main .answer-btns button.correct {
   background-color: green;
